@@ -1,0 +1,39 @@
+using System.Net;
+using System.Text.Json;
+
+namespace CarRetailSystem.Api.Common.Middleware;
+
+public class ExceptionHandlerMiddleware(RequestDelegate next, ILogger<ExceptionHandlerMiddleware> logger)
+{
+    public async Task InvokeAsync(HttpContext context)
+    {
+        try
+        {
+            await next(context);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Unhandled exception for {Method} {Path}", context.Request.Method, context.Request.Path);
+            await WriteErrorAsync(context, ex);
+        }
+    }
+
+    private static async Task WriteErrorAsync(HttpContext context, Exception ex)
+    {
+        context.Response.ContentType = "application/json";
+        context.Response.StatusCode = ex switch
+        {
+            InvalidOperationException => (int)HttpStatusCode.BadRequest,
+            UnauthorizedAccessException => (int)HttpStatusCode.Unauthorized,
+            _ => (int)HttpStatusCode.InternalServerError
+        };
+
+        var body = JsonSerializer.Serialize(new
+        {
+            message = context.Response.StatusCode == 500
+                ? "An unexpected error occurred."
+                : ex.Message
+        });
+        await context.Response.WriteAsync(body);
+    }
+}
