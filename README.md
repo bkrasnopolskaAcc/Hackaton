@@ -1,9 +1,14 @@
 # Team <name>
 
 ## Participants
-- Name (role(s) played today)
-- Name (role(s) played today)
-- Name (role(s) played today)
+- Sylwester Niemiec (role(s) played today)
+- Jacek Gach (role(s) played today)
+- Beata Krasnopolska (role(s) played today)
+- Marlena Kurkiewicz
+- Michał Szymczyk
+- Krzysztof Miechowicz
+- Wandalowski Marcin
+- Jarosław Weselski
 
 ## Scenario
 Scenario 1: Code Modernization
@@ -15,8 +20,15 @@ started. What runs, what's scaffolding, what's faked.
 ## Challenges Attempted
 | # | Challenge | Status | Notes |
 |---|---|---|---|
-| 1 | The <name> | done / partial / skipped | |
+| 1 | The Stories | done/ partial / skipped |  |
 | 2 | | | |
+| 3 | | | |
+| 4 | The Pin | partial | Prepared test documentation without automated tests |
+| 5 | | | |
+| 6 | | | |
+| 7 | | | |
+| 8 | | | |
+| 9 | The Scout | skipped | |
 
 ## Key Decisions
 Biggest calls you made and why. Link into `/decisions` for the full ADRs.
