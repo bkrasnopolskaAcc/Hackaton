@@ -1,0 +1,79 @@
+# Logs
+*.log
+logs/
+
+# Backups
+*.bak
+*.backup
+backups/
+
+# IDE
+.vscode/
+*.suo
+*.user
+*.sln.docstates
+bin/
+obj/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.mdf
+*.ldf
+*.ndf
+
+# COM Registration
+*.tlb
+*.olb
+
+# Build artifacts
+dist/
+build/
+.build/
+
+# Temp files
+*.tmp
+*.temp
+~*
+
+# SQL Management Studio
+*.ssms_suo
+
+# IIS
+web.config.local
+web.config.prod
+
+# Deployment
+deploy/
+release/
+
+# Node modules (if using modern tools)
+node_modules/
+npm-debug.log
+
+# Python (if using modern tools)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Credentials (NEVER commit these)
+secrets.config
+*.key
+*.pem
+
+# IDE specific
+.idea/
+*.swp
+*.swo
+
+# Test results
+TestResults/
+coverage/
+.coverage
+
+# Package outputs
+*.nupkg
+*.snupkg
