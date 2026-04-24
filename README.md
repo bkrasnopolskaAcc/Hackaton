@@ -7,7 +7,7 @@
 - Niemiec Sylwester ()
 - Szymczyk Michał (PM)
 - Wandalowski Marcin (developer)
-- Miechowicz Krzysztof (developer)
+- Miechowicz Krzysztof (legacy developer)
 - Krasnopolska Beata (developer)
 
 ## Scenario
