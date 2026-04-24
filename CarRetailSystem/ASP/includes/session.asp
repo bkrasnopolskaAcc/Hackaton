@@ -3,8 +3,6 @@
 ' Handles user session initialization and validation
 ' WARNING: Basic implementation - prone to hijacking
 
-Option Explicit
-
 ' Session timeout configuration (inherited from config.asp)
 ' SESSION_TIMEOUT constant should be defined in config.asp
 

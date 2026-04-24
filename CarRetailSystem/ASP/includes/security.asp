@@ -75,29 +75,6 @@ Sub LogSecurityEvent(incident, details)
     LogEvent "SECURITY", logEntry
 End Sub
 
-' ===== SESSION MANAGEMENT =====
-
-Sub InitializeSession()
-    Session("CreatedDate") = Now()
-    Session("LastActivity") = Now()
-End Sub
-
-Sub UpdateSessionActivity()
-    Session("LastActivity") = Now()
-End Sub
-
-Function IsSessionExpired()
-    Dim expirationTime
-    expirationTime = DateAdd("n", SESSION_TIMEOUT, Session("LastActivity"))
-    
-    If Now() > expirationTime Then
-        IsSessionExpired = True
-    Else
-        IsSessionExpired = False
-        UpdateSessionActivity()
-    End If
-End Function
-
 ' ===== PASSWORD VALIDATION (LEGACY - NO HASHING) =====
 ' WARNING: Passwords stored in plain text - SECURITY RISK
 

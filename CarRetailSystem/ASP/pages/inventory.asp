@@ -6,9 +6,9 @@
 Option Explicit
 Response.Expires = 0
 %>
-<!--#include file="../includes/config.asp"-->
-<!--#include file="../includes/session.asp"-->
-<!--#include file="../includes/security.asp"-->
+<!--#include virtual="/includes/config.asp"-->
+<!--#include virtual="/includes/session.asp"-->
+<!--#include virtual="/includes/security.asp"-->
 
 <%
 ' Require login

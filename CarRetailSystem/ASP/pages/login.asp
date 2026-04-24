@@ -7,7 +7,7 @@
 Option Explicit
 Response.Expires = 0
 %>
-<!--#include file="../includes/config.asp"-->
+<!--#include virtual="/includes/config.asp"-->
 
 <%
     Dim username, password, conn, rs, userFound
@@ -33,12 +33,16 @@ Response.Expires = 0
                 Session("UserID") = rs("UserID")
                 Session("UserName") = rs("UserName")
                 Session("Role") = rs("Role")
+                rs.Close
                 conn.Close
-                Response.Redirect "dashboard.asp"
+                Set rs = Nothing
+                Set conn = Nothing
+                Response.Redirect "index.asp"
+                Response.End
             Else
                 userFound = False
             End If
-            
+
             rs.Close
             conn.Close
             Set rs = Nothing

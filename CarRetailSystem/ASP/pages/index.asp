@@ -10,8 +10,8 @@ Response.ExpiresAbsolute = Now() - 1
 Response.AddHeader "pragma","no-cache"
 Response.AddHeader "cache-control","no-cache"
 %>
-<!--#include file="../includes/config.asp"-->
-<!--#include file="../includes/session.asp"-->
+<!--#include virtual="/includes/config.asp"-->
+<!--#include virtual="/includes/session.asp"-->
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>

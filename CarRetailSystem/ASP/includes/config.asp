@@ -4,10 +4,10 @@
 ' WARNING: Credentials stored in plain text (SECURITY ISSUE)
 
 ' ===== DATABASE CONFIGURATION =====
-Const DB_CONNECTION_STRING = "Provider=SQLOLEDB;Server=.\SQLEXPRESS;Database=CarRetailDB;UID=sa;PWD=Admin@123;"
+Const DB_CONNECTION_STRING = "Provider=SQLNCLI11;Server=.;Database=CarRetailDB;UID=sa;PWD=Admin@123;Connect Timeout=30;"
 
-' Alternative for named instance:
-' Const DB_CONNECTION_STRING = "Provider=SQLOLEDB;Server=SERVERNAME\SQLEXPRESS;Database=CarRetailDB;UID=sa;PWD=Admin@123;"
+' Windows Auth alternative (requires IIS running as domain account with SQL access):
+' Const DB_CONNECTION_STRING = "Provider=SQLOLEDB;Server=(local);Database=CarRetailDB;Integrated Security=SSPI;"
 
 ' ===== APPLICATION SETTINGS =====
 Const APP_NAME = "CarRetailSystem"
